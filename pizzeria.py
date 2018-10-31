@@ -28,6 +28,15 @@ while(i<=cantPizzas):
     
     while(respuesta=="s"):
         print("Con ingredientes adicionales")
+        print("Ingredientes:")
+        print("Jamon (ja)")
+        print("Champinones (ch)")
+        print("Pimenton (pi)")
+        print("Doble queso (dq)")
+        print("Aceitunas (ac)")
+        print("Pepperoni (pp)")
+        print("Salchichon (sa)")
+        ingAdicional = input('Ingrese el ingrediente :')
     if(respuesta=="n"):
         print("Usted ordeno una pizza de tamano "+ constantes.TAMANO.get(tamanoPizza) +" sin ingredientes adicionales")
         precioPizza=constantes.PRECIOS_TAMANO.get(tamanoPizza)
