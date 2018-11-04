@@ -1,3 +1,6 @@
+# Modulo que contiene la informacion de precios de los ingredientes y tamanos de pizzas 
+
+# --- Pizzas ---
 PRECIOS_TAMANO={
     "g": 580,
     "m": 430,
@@ -9,18 +12,20 @@ TAMANO = {
     "m": "Mediana",
     "p": "Personal"
 }
+# --- Fin Pizzas ---
 
+# --- Ingredientes ---
 PRECIOS_TOPPING={
-    "ja": 40,
-    "ch": 35,
-    "pi": 30,
-    "dq": 40,
-    "ac": 57.5,
-    "pp": 38.5,
-    "sa": 62.5
+    "Jamon": 40,
+    "Champinones": 35,
+    "Pimenton": 30,
+    "Doble Queso": 40,
+    "Aceitunas": 57.5,
+    "Pepperoni": 38.5,
+    "Salchichon": 62.5
 }
 
-TOOPING = {
+TOPPING = {
     "ja": "Jamon",
     "ch": "Champinones",
     "pi": "Pimenton",
@@ -29,3 +34,4 @@ TOOPING = {
     "pp": "Pepperoni",
     "sa": "Salchichon"
 }
+# --- Fin Ingredientes ---
