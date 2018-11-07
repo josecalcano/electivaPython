@@ -39,8 +39,40 @@ def seleccionaIngredientes():
             break
     return ingredientes
 
-print("Portu Pizza")
+def delivery():
+    while (True):
+        delivery = ""
+        while ((delivery != "n") and (delivery != "s")):
+            delivery = input("Actualmente contamos con un servicio de Delivery hacia cualquier lugar de Caracas por un precio extra de Bs 50. ¿Desea agregar al pedido el Delivery? Marque s(Si) | n(No): ")
+            if ((delivery != "n") and (delivery != "s")):
+                print("Debe seleccionar una opcion correcta")
+        if (delivery == "n"):
+            return 0
+        if (delivery == "s"):
+            direccion = input("Ha seleccionado el servicio Delivery. Coloque la dirección a la que se enviara su pedido: ")
+            print("La direccion de destino será: " + direccion)
+            return 50
 
+def metodoPago(precioTotal):
+    print("¿Con qué método de pago pagará? Opciones:")
+    pago = ""
+    while (True):
+        while ((pago != "e") and (pago != "c") and (pago != "p")):
+            pago = input(" (e) Efectivo \n (c) Cesta Tickets \n (p) Petros \n")
+            if ((pago != "e") and (pago != "c") and (pago != "p")):
+                print("Debe seleccionar una opción correcta")
+        if (pago == "e"):
+            print("Su pago pasará a efectuarse con el método de pago en efectivo.")
+            break
+        if (pago == "c"):
+            print("Su pago pasará a efectuarse con el método de pago en Cesta Tickets.")
+            break
+        if (pago == "p"):
+            precioTotal *= 0.05
+            print("Su pago pasará a efectuarse con el método de pago en Petros. Debido a las condiciones del Petro su nuevo monto es de: " + str(precioTotal) + " petros.")
+            break
+
+print("--- Portu Pizza ---")
 print("Bienvenido a Portu Pizza")
 
 while (True):
@@ -87,4 +119,6 @@ while (True):
 if (cantidad == 0):
     print('Adiós!')
 else:
-    print('La cantidad de pizzas que ordenó fué de ' + str(cantidad) +'. Por un total de ' + str(precioTotal) + ". Gracias por su compra! Que tenga buen dia.")
+    precioTotal += delivery()
+    print('La cantidad de pizzas que ordenó fué de ' + str(cantidad) +'. Por un total de ' + str(precioTotal) + ". ")
+    metodoPago(precioTotal)
